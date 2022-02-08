@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from './ContactForm';
 import Contacts from './Contacts';
 
 const ContactBook = () => {
@@ -10,6 +11,7 @@ const ContactBook = () => {
 
     return (
         <div className="container">
+            <ContactForm />
             <Contacts contacts={contacts} />
         </div>
     );

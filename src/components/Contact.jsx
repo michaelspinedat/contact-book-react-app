@@ -10,7 +10,9 @@ const Contact = ({ contact }) => {
             <th scope="row">{id}</th>
             <td>{name}</td>
             <td>{number}</td>
-            <td>Eliminar</td>
+            <td>
+                <button className="btn btn-danger" type="button">Eliminar</button>
+            </td>
         </tr>
     );
 };
