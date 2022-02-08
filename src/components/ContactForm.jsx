@@ -17,6 +17,7 @@ const ContactForm = ({ onSubmit }) => {
     const handleSubmit = e => {
         e.preventDefault();
         onSubmit(addAction(contact));
+        setContact({ name: "", number: "" });
     }
 
     return (
@@ -34,6 +35,7 @@ const ContactForm = ({ onSubmit }) => {
                         placeholder="Nombre"
                         value={contact.name}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="mb-3">
@@ -48,9 +50,10 @@ const ContactForm = ({ onSubmit }) => {
                         placeholder="Numero"
                         value={contact.number}
                         onChange={handleChange}
+                        required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="form-control btn btn-primary">
                     Agregar
                 </button>
             </form>

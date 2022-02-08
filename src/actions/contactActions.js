@@ -17,5 +17,14 @@ const deleteAction = id => {
     });
 }
 
-export { addAction, deleteAction };
+const getContacts = () => {
+    const contacts = JSON.parse(localStorage.getItem("contacts"));
+    return contacts || [];
+}
+
+const saveContacts = contacts => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+}
+
+export { addAction, deleteAction, getContacts, saveContacts };
 
