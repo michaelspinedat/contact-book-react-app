@@ -10,5 +10,12 @@ const addAction = contact => {
     });
 }
 
-export { addAction };
+const deleteAction = id => {
+    return ({
+        type: "delete",
+        payload: id
+    });
+}
+
+export { addAction, deleteAction };
 

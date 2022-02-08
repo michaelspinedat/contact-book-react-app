@@ -15,7 +15,7 @@ const ContactBook = () => {
     return (
         <div className="container">
             <ContactForm onSubmit={dispatch} />
-            <Contacts contacts={contacts} />
+            <Contacts onChange={dispatch} contacts={contacts} />
         </div>
     );
 };

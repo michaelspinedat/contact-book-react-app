@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Contact from './Contact';
 
-const Contacts = ({ contacts }) => {
+const Contacts = ({ contacts, onChange }) => {
     return (
         <div className="container my-5">
             <table className="table table-striped table-hover">
@@ -15,7 +15,7 @@ const Contacts = ({ contacts }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {contacts.map(contact => (<Contact key={contact.id} contact={contact} />))}
+                    {contacts.map(contact => (<Contact onChange={onChange} key={contact.id} contact={contact} />))}
                 </tbody>
             </table>
 
